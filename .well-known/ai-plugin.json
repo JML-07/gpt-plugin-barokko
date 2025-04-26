@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Barokko Frazy SEO",
+  "name_for_model": "barokko_frazy_manager",
+  "description_for_human": "Zarządzanie frazami SEO dla opisów kategorii Barokko.pl",
+  "description_for_model": "Plugin do pobierania i aktualizacji fraz SEO w sklepie Barokko.pl, zintegrowany z Google Sheets.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://twoje-repo.github.io/openapi.yaml"
+  },
+  "logo_url": "https://twoje-repo.github.io/logo.png",
+  "contact_email": "jerzy.lastowski@barokko.pl",
+  "legal_info_url": "https://barokko.pl/polityka-prywatnosci"
+}
