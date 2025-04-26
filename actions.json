@@ -1,0 +1,11 @@
+{
+  "actions": [
+    {
+      "name": "BarokkoSEOFrazy",
+      "description": "Automatyczne pobieranie i aktualizacja fraz SEO z Google Sheets w module Barokko AI.",
+      "metadata": {
+        "openapi_schema_url": "https://jml-07.github.io/gpt-plugin-barokko/openapi.yaml"
+      }
+    }
+  ]
+}
