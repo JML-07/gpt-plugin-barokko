@@ -9,9 +9,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://twoje-repo.github.io/openapi.yaml"
+    "url": "https://jml-07.github.io/gpt-plugin-barokko/openapi.yaml"
   },
-  "logo_url": "https://twoje-repo.github.io/logo.png",
+  "logo_url": "https://jml-07.github.io/gpt-plugin-barokko/logo.png",
   "contact_email": "jerzy.lastowski@barokko.pl",
   "legal_info_url": "https://barokko.pl/polityka-prywatnosci"
 }
