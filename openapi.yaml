@@ -1,0 +1,76 @@
+openapi: 3.1.0
+info:
+  title: Barokko Frazy SEO
+  description: API do zarządzania frazami SEO przez Google Sheets – operacje GET i POST.
+  version: 1.0.1
+
+servers:
+  - url: https://script.google.com/macros/s/AKfycbwc8x6Cf2tWUQZoThtQ5g-NeTDviCDzMohmvAL7XdBxFs7HVwlw1_ksG4HQ-7VLf4Nk/exec
+
+paths:
+  /:
+    options:
+      summary: Obsługa preflight CORS
+      responses:
+        '204':
+          description: No content
+    get:
+      operationId: wczytaj_frazy
+      summary: Pobierz listę fraz SEO
+      responses:
+        '200':
+          description: Tablica fraz SEO
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    fraza:
+                      type: string
+                    docelowa_liczba_uzyc:
+                      type: integer
+                    uzycia_tekst:
+                      type: integer
+                    uzycia_naglowki:
+                      type: integer
+                    lacznie_uzyte:
+                      type: integer
+                    pozostalo:
+                      type: integer
+                    status:
+                      type: string
+    post:
+      operationId: zapisz_frazy
+      summary: Zapisz lub zaktualizuj frazę SEO
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - fraza
+              properties:
+                fraza:
+                  type: string
+                docelowa_liczba_uzyc:
+                  type: integer
+                uzycia_tekst:
+                  type: integer
+                uzycia_naglowki:
+                  type: integer
+                lacznie_uzyte:
+                  type: integer
+                pozostalo:
+                  type: integer
+                status:
+                  type: string
+      responses:
+        '200':
+          description: Potwierdzenie zapisu
+          content:
+            text/plain:
+              schema:
+                type: string
