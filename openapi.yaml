@@ -3,19 +3,12 @@ info:
   title: Barokko Frazy SEO
   description: API do zarządzania frazami SEO przez Google Sheets – operacje GET i POST.
   version: 1.0.1
-
 servers:
   - url: https://script.google.com/macros/s/AKfycbwc8x6Cf2tWUQZoThtQ5g-NeTDviCDzMohmvAL7XdBxFs7HVwlw1_ksG4HQ-7VLf4Nk/exec
-
 paths:
   /:
-    options:
-      summary: Obsługa preflight CORS
-      responses:
-        '204':
-          description: No content
     get:
-      operationId: wczytaj_frazy
+      operationId: wczytajFrazy
       summary: Pobierz listę fraz SEO
       responses:
         '200':
@@ -42,7 +35,7 @@ paths:
                     status:
                       type: string
     post:
-      operationId: zapisz_frazy
+      operationId: zapiszFraze
       summary: Zapisz lub zaktualizuj frazę SEO
       requestBody:
         required: true
@@ -50,8 +43,6 @@ paths:
           application/json:
             schema:
               type: object
-              required:
-                - fraza
               properties:
                 fraza:
                   type: string
@@ -69,7 +60,7 @@ paths:
                   type: string
       responses:
         '200':
-          description: Potwierdzenie zapisu
+          description: Fraza zapisana pomyślnie
           content:
             text/plain:
               schema:
